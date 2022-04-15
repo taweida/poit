@@ -23,8 +23,8 @@ p {
 }
 
 .container {
-    border: 2px solid black;
-    border-radius: 2%;
+    /* border: 2px solid black;
+    border-radius: 2%; */
     max-width: 1200px;
     margin: auto;
     display: grid;
