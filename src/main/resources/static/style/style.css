@@ -7,6 +7,21 @@ header, footer {
     text-align: center;
 }
 
+header, main, aside, footer {
+    padding: 2em;
+    border: 2px solid #ca8560;
+    /* f7a579 */
+    border-radius: 1%;
+    /* font-size: 200%; */
+} 
+
+p {
+    color: #3f1651;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .container {
     border: 2px solid black;
     border-radius: 2%;
@@ -32,8 +47,16 @@ header, footer {
     grid-area: nav;
 }
 
+.item-left {
+    grid-area: sideleft;
+}
+
 .item-main {
     grid-area: main;
+}
+
+.item-right {
+    grid-area: sideright;
 }
 
 .item-foot {
