@@ -1,0 +1,48 @@
+h1 {
+    color: #06114F;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 2%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "head head head"
+        "nav nav nav"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "foot foot foot";
+}
+
+.item-head {
+    grid-area: head;
+}
+
+.item-nav {
+    grid-area: nav;
+}
+
+.item-main {
+    grid-area: main;
+}
+
+.item-foot {
+    grid-area: foot;
+}
+
+h2.footer {
+    color: #06114F;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: xx-large;
+    text-align: right;
+}
