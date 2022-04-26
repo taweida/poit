@@ -9,7 +9,8 @@ public class HelloController {
 
 	@GetMapping("/greetings")
 	public String index() {
-		return "Greetings from Spring Boot!";
+		System.out.println("we went to /greetings!");
+		return "<h1>Greetings from Spring Boot!</h1>";
 	}
 
 	@RequestMapping(value="/clicked")
