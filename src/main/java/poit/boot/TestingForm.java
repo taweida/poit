@@ -5,19 +5,19 @@ public class TestingForm {
     private String name;
     private String poem;
 
-    public String getId() {
+    public String getName() {
         return name;
     }
     
-    public void setId(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getContent() {
+    public String getPoem() {
         return poem;
     }
     
-    public void setContent(String poem) {
+    public void setPoem(String poem) {
         this.poem = poem;
     }
 
