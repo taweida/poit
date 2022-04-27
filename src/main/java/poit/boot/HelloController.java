@@ -18,13 +18,13 @@ public class HelloController {
 
 	@GetMapping("/home")
 	public String poemForm(Model model){
-		model.addAttribute(new TestingForm());
+		model.addAttribute("testingForm", new TestingForm());
 		return "home";
 	}
 
 	@PostMapping("/home")
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
-		model.addAttribute(testingForm);
+		model.addAttribute("testingForm", testingForm);
 		return "result";
 	}
 
