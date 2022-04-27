@@ -1,6 +1,5 @@
 h1 {
     color: #06114F;
-    font-family: 'Kulim Park', sans-serif;
 }
 
 header, footer {
@@ -17,7 +16,6 @@ header, main, aside, footer {
 
 p {
     color: #3f1651;
-    font-family: 'Thasadith', sans-serif;
     font-size: 24px;
     font-weight: bold;
 }
@@ -65,7 +63,6 @@ p {
 
 h2.footer {
     color: #06114F;
-    font-family: 'Libre Barcode 39 Text', cursive;
     font-size: xx-large;
     text-align: right;
 }
