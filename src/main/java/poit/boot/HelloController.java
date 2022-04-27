@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @Controller
 public class HelloController {
 
-	@GetMapping("/greetings")
-	public String index() {
-		System.out.println("we went to /greetings!");
-		return "<h1>Greetings from Spring Boot!</h1>";
-	}
+	// @GetMapping("/greetings")
+	// public String index() {
+	// 	System.out.println("we went to /greetings!");
+	// 	return "<h1>Greetings from Spring Boot!</h1>";
+	// }
 
 	@GetMapping("/home")
 	public String poemForm(Model model){
