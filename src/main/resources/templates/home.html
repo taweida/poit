@@ -1,18 +1,13 @@
-<!-- <!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title> PoIT | Sentence-to-Poem-Generator </title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link th:href="@{styles/main.css}" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@600&family=Libre+Barcode+39+Text&family=Permanent+Marker&family=Thasadith&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
-    	<p>Id: <input type="text" th:field="*{name}" /></p>
-        <p>Message: <input type="text" th:field="*{poem}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
     <div class="container">
         <header class="item-head">
             <h1>
@@ -29,17 +24,12 @@
                 And we display the sentence entered and the poem generated.
             </p>
             <p>
+                <h1>Form</h1>
                 <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
-                    <p>Name: <input type="text" th:field="*{name}"/> </p>
-                    <p>Poem: <input type="text" th:field="*{poem}"/> </p>
-                    <p><input type="submit" value="submit"</p>
+                    <p>Name: <input type="text" th:field="*{name}" /></p>
+                    <p>Poem: <input type="text" th:field="*{poem}" /></p>
+                    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
                 </form>
-            </p>
-            <p>
-                <h1>Results</h1>
-                <p th:text="'Name: ' + ${testingForm.name}"/>
-                <p th:text="'Poem: ' + ${testingForm.poem}"/>
-                <a href="/home">Try again!</a>
             </p>
         </main>
         <aside class="item-left">
@@ -74,8 +64,9 @@
         </footer>
     </div>
 </body>
-</html> -->
 
+</html>
+<!-- 
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
@@ -90,4 +81,4 @@
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
 </body>
-</html>
+</html> -->
