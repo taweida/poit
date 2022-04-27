@@ -22,13 +22,15 @@ public class HelloController {
 	}
 
 	@GetMapping("/home")
-	public void poemForm(Model model){
+	public String poemForm(Model model){
 		model.addAttribute(new TestingForm());
+		return "home";
 	}
 
 	@PostMapping("/home")
-	public void poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
+	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 		model.addAttribute(testingForm);
+		return "home";
 	}
 
 }
