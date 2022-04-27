@@ -28,4 +28,16 @@ public class HelloController {
 		return "result";
 	}
 
+	@GetMapping("/poemPage")
+	public String realPoemForm(Model model){
+		model.addAttribute("poemForm", new TestingForm());
+		return "poemPage";
+	}
+
+	@PostMapping("/poemPage")
+	public String realPoemSubmit(Model model){
+		model.addAttribute("poemForm", new TestingForm());
+		return "poemPage";
+	}
+
 }
