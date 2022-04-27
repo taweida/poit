@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
@@ -24,12 +24,11 @@
                 And we display the sentence entered and the poem generated.
             </p>
             <p>
-                <!-- Practice Testing Poem Form... -->
-                <!-- <form action="#" th:action="@{/home}" th:object="@{testingForm}" method="post">
+                <form action="#" th:action="@{/home}" th:object="@{testingForm}" method="post">
                     <p>Name: <input type="text" th:field="*{name}"/> </p>
                     <p>Poem: <input type="text" th:field="*{poem}"/> </p>
                     <p><input type="submit" value="submit"</p>
-                </form> -->
+                </form>
             </p>
             <p>
                 <h1>Results</h1>
@@ -71,4 +70,18 @@
     </div>
 </body>
 
+</html> -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'id: ' + ${testingForm.id}" />
+    <p th:text="'content: ' + ${testingForm.content}" />
+    <a href="/home">Submit another message</a>
+</body>
 </html>
