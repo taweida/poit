@@ -1,8 +1,11 @@
 package poit.boot;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 @RestController
 public class HelloController {
@@ -18,5 +21,14 @@ public class HelloController {
 		System.out.println("Something was clicked!");
 	}
 
+	@GetMapping("/home")
+	public void poemForm(Model model){
+		model.addAttribute(new TestingForm());
+	}
+
+	@PostMapping("/home")
+	public void poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
+		model.addAttribute(testingForm);
+	}
 
 }
