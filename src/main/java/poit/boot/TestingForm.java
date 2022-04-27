@@ -2,23 +2,23 @@ package poit.boot;
 
 public class TestingForm {
 
-    private String id;
-    private String content;
+    private String name;
+    private String poem;
 
     public String getId() {
-        return id;
+        return name;
     }
     
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String name) {
+        this.name = name;
     }
 
     public String getContent() {
-        return content;
+        return poem;
     }
     
-    public void setContent(String content) {
-        this.content = content;
+    public void setContent(String poem) {
+        this.poem = poem;
     }
 
 }
