@@ -40,10 +40,11 @@ public class HelloController {
 		//And we can use the simple "testingForm" as a way for Poem to communicate through Thymeleaf
 		//because I know it works. Call testingForm an adaptor lol. 
 		model.addAttribute("testingForm", testingForm);
-		return "home";
+		return "result";
 	}
 
 	// Could use this "PoemPage" as a template for Kai's real poem object. 
+	// But not being used right now. 
 	@GetMapping("/poemPage")
 	public String realPoemForm(Model model){
 		model.addAttribute("poemForm", new TestingForm());
