@@ -25,7 +25,7 @@ public class HelloController {
 	@PostMapping("/home")
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 		model.addAttribute("testingForm", testingForm);
-		return "result";
+		return "home";
 	}
 
 	@GetMapping("/poemPage")
