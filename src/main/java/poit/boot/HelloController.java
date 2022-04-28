@@ -27,7 +27,10 @@ public class HelloController {
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 
 		PoemFactory poem = new PoemFactory();
-		poem.buildPoem(testingForm.getPoem());
+		Poem newPoem;
+		newPoem = poem.buildPoem(testingForm.getPoem());
+
+		testingForm.setPoem(newPoem.poemText);
 
 		model.addAttribute("testingForm", testingForm);
 		return "home";
