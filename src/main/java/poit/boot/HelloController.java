@@ -2,6 +2,7 @@ package poit.boot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,10 +25,15 @@ public class HelloController {
 
 	@PostMapping("/home")
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
+
+		PoemFactory poem = new PoemFactory();
+		poem.buildPoem(testingForm.getPoem());
+
 		model.addAttribute("testingForm", testingForm);
 		return "home";
 	}
 
+	// Could use this "PoemPage" as a template for Kai's real poem object. 
 	@GetMapping("/poemPage")
 	public String realPoemForm(Model model){
 		model.addAttribute("poemForm", new TestingForm());
