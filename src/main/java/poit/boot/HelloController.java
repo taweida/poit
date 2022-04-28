@@ -31,7 +31,7 @@ public class HelloController {
 			case "Haiku":
 				PoemFactory haikuFactory = new HaikuFactory();
 				Poem haikuPoem = haikuFactory.buildPoem(testingForm.getPoem());
-				testingForm.setPoem("Hello there\nI'm testing\nNewline characteres and my\nswitch statment");
+				testingForm.setPoem("Hello there<br>I'm testing<br>Newline characteres and my<br>switch statment");
 			break;
 
 			case "Shakespeare":
