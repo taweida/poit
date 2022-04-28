@@ -31,7 +31,7 @@ public class HelloController {
 			case "Haiku":
 				PoemFactory haikuFactory = new HaikuFactory();
 				Poem haikuPoem = haikuFactory.buildPoem(testingForm.getPoem());
-				testingForm.setPoem(haikuPoem.getPoemText());
+				testingForm.setPoem("Hello there\nI'm testing\nNewline characteres and my\nswitch statment");
 			break;
 
 			case "Shakespeare":
@@ -46,7 +46,7 @@ public class HelloController {
 				testingForm.setPoem(limerickPoem.getPoemText());
 			break;
 		}
-		
+
 		//Seems that addAttribute is essentialy "pushing"? 
 		//And we can use the simple "testingForm" as a way for Poem to communicate through Thymeleaf
 		//because I know it works. Call testingForm an adaptor lol. 
