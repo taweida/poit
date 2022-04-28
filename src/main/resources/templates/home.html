@@ -41,8 +41,6 @@
 				<h1>GENERATE YOUR VERY OWN</h1>
 				<h2>POEM</h2>
 				<p>And select your desired poem style.</p>
-			</div>
-            <div class="services">
                 <div class="services_container">
                     <h1>Form</h1>
                     <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
@@ -57,6 +55,9 @@
                     <p th:text="'Poem: ' + ${testingForm.poem}" />
                     <a href="/home">Submit another message</a>
                 </div>
+			</div>
+            <div class="services">
+
             </div>
 			<!-- 
 			<div class="main_image--container">
