@@ -27,14 +27,14 @@ public class HelloController {
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 
 		//Initialize a PoemFactory, and a poem for the built poem to live. 
-		PoemFactory poem = new PoemFactory();
-		Poem newPoem;
+		PoemFactory factory = new PoemFactory();
+		Poem poem;
 
 		//Pass the recieved text (from our adaptor testingForm) to Kai's build poem function?
-		newPoem = poem.buildPoem(testingForm.getPoem());
+		poem = factory.buildPoem(testingForm.getPoem());
 
 		//Reset the adaptors poem text to the new poem for output testing?
-		testingForm.setPoem(newPoem.poemText);
+		testingForm.setPoem(poem.getPoemText());
 
 		//Seems that addAttribute is essentialy "pushing"? 
 		//And we can use the simple "testingForm" as a way for Poem to communicate through Thymeleaf
