@@ -1,90 +1,92 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title> PoIT | Sentence-to-Poem-Generator </title>
-    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
-    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@600&family=Libre+Barcode+39+Text&family=Permanent+Marker&family=Thasadith&display=swap" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>poIT Website</title>
+	<link rel="stylesheet" href="../static/css/webStyle.css" th:href="@{/css/webStyle.css}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <header class="item-head">
-            <h1>
-                PoIT 
-                <br>
-                A Sentence-to-Poem-Generator
-            </h1>
-        </header>
-        <main class="item-main">
-            <p>
-                So here we have some stuff. Like a text entry box.
-            </p>
-            <p>
-                And we display the sentence entered and the poem generated.
-            </p>
-            <p>
-                <h1>Form</h1>
-                <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
-                    <p>Name: <input type="text" th:field="*{name}" /></p>
-                    <p>Poem: <input type="text" th:field="*{poem}" /></p>
-                    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-                </form>
-            </p>
+	<nav class="navbar">
+		<div class="navbar__container">
+			<a href="/" id="navbar__logo">PoIT</a>
+			<div class="navbar__toggle" id="mobile-menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+			<ul class="navbar__menu">
+				<li class="navbar__item">
+					<a href="/PoemPage.html" class="navbar__links">
+					Home
+					</a>
+				</li>
+				<li class="navbar__btn">
+					<a href="/" class="button">
+					Make Poem
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<div class="main">
+		<div class="main__container">
+			<div class="main__content">
+				<h1>GENERATE YOUR VERY OWN</h1>
+				<h2>POEM</h2>
+				<p>And select your desired poem style.</p>
+
+			</div>
+            <h1>Form</h1>
+            <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
+                <p>Name: <input type="text" th:field="*{name}" /></p>
+                <p>Poem: <input type="text" th:field="*{poem}" /></p>
+                <p><button type="submit" value="Submit" class="main__btn">Go!</button></p>
+            </form>
             <p>
                 <h1>Result</h1>
                 <p th:text="'Name: ' + ${testingForm.name}" />
                 <p th:text="'Poem: ' + ${testingForm.poem}" />
                 <a href="/home">Submit another message</a>
             </p>
-        </main>
-        <aside class="item-left">
-            <p>
-                Here we have some more stuff. Maybe a Navbar?
-            </p>
-            <p>
-                Maybe account information>
-            </p>
-        </aside>
-        <aside class="item-right">
-            <p>
-                And over here we have recently generated poems
-            </p>
-            <p>
-                Maybe these are based on the user, or all poems...
-            </p>
-            <p>
-                Hopefully these are stored in a DB and we can pull them however we want... 
-            </p>
-        </aside>
-        <footer class="item-foot">
-            <h2 class="footer">
-                CSCI 4448
-                <br>
-                Trevor Aweida
-                <br>
-                Kai Hueske-Vanceylon
-                <br>
-                Ryan Osler
-            </h2>
-        </footer>
-    </div>
-</body>
+			<!-- 
+			<div class="main_image--container">
+				<img src="images/pic1.svg" alt="pic" id="main__img">
+			</div>
+			-->
+		</div>
+	</div>
 
-</html>
-<!-- 
-<!DOCTYPE HTML>
-<html xmlns:th="https://www.thymeleaf.org">
-<head> 
-    <title>Getting Started: Handling Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-	<h1>Form</h1>
-    <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
-    	<p>Name: <input type="text" th:field="*{name}" /></p>
-        <p>Poem: <input type="text" th:field="*{poem}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
+
+
+	<!--Footer-->
+		</div>
+		<div class="social__media">
+			<div class="social__media--wrap">
+				<div class="footer__logo">
+					<a href="/" id="footer__logo"><i class="fas faa-gem"></i>PoIT</a>
+				</div>
+				<p class="website__right"> © PoIT 2022. All rights reserved</p>
+				<div class="social__icons">
+								<a href="/" class="social__icon--link" target = "_blank">
+									<i class="fab fa-github"></i>
+									</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src = ""></script>
+	<!--In the quotes, place javascript file-->
 </body>
-</html> -->
+</html>
+
+
+
