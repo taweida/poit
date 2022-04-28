@@ -4,6 +4,7 @@ public class TestingForm {
 
     private String name;
     private String poem;
+    private String style;
 
     public String getName() {
         return name;
@@ -19,6 +20,14 @@ public class TestingForm {
     
     public void setPoem(String poem) {
         this.poem = poem;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 
 }

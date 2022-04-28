@@ -43,7 +43,7 @@
 				<p>And select your desired poem style.</p>
                 <div class="main_container">
 					<h1>Result</h1>
-					<p th:text="${testingForm.name} + ':'" />
+					<p th:text="${testingForm.name} + ' + ' + ${testingForm.style} + ':'" />
 					<h4 th:text="${testingForm.poem}" />
 					<button class="main__btn"><a href="home">Submit another message</a></button>
                 </div>

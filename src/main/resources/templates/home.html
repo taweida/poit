@@ -46,6 +46,12 @@
                     <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
                         <p>Name: <input type="text" th:field="*{name}" /></p>
                         <p>Poem: <input type="text" th:field="*{poem}" /></p>
+							<p>Style: <select th:field="*{style}">
+								<option th:value="'Haiku'" th:text="Haiku"></option>
+								<option th:value="'Shakespeare'" th:text="Shakespeare"></option>
+								<option th:value="'Limerick'" th:text="Limerick"></option>
+								</select> 
+							</p>
                         <p><button type="submit" value="Submit" class="main__btn">Go!</button></p>
                     </form>
                 </div>

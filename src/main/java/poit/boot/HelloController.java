@@ -11,18 +11,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @Controller
 public class HelloController {
 
-	// @GetMapping("/greetings")
-	// public String index() {
-	// 	System.out.println("we went to /greetings!");
-	// 	return "<h1>Greetings from Spring Boot!</h1>";
-	// }
-
+	// Here we esentially build our testingForm, which I'm kind of calling an adaptor. 
+	// And it links up to the form through Thymeleaf...
 	@GetMapping("/home")
 	public String poemForm(Model model){
 		model.addAttribute("testingForm", new TestingForm());
 		return "home";
 	}
 
+	//Here, once the sumbit button is clicked, the "testingForm adaptor" is populated
+	//with the user's input from the respective form.
+	// Then we pass the values of our testingForm object, the Poem Factory.
 	@PostMapping("/home")
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 
