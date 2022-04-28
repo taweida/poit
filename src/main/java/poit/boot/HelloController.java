@@ -29,6 +29,20 @@ public class HelloController {
 		PoemFactory factory = new PoemFactory();
 		Poem poem;
 
+		switch (testingForm.getStyle()) {
+			case "Haiku":
+
+			break;
+
+			case "Shakespeare":
+
+			break;
+
+			case "Limerick":
+				
+			break;
+		}
+
 		//Pass the recieved text (from our adaptor testingForm) to Kai's build poem function?
 		poem = factory.buildPoem(testingForm.getPoem());
 

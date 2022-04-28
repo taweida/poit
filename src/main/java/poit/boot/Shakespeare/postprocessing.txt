@@ -1,0 +1,9 @@
+replacement_terms = ['v.', 't.', 'sub.', 'adj.', 'adj,', 'adv.', 'p.', 'i.']
+
+with open("dictionary.txt", 'r') as file:
+	lines = file.readlines()
+	for line in lines:
+		line_list = line.split(',')
+		if line_list[0].isupper():
+			for term in replacement_terms:
+				line_list

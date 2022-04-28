@@ -1,0 +1,12 @@
+import requests
+
+entries = []
+for c_idx in range(ord("a"), ord("z") + 1):
+	document = requests.get(f'https://absoluteshakespeare.com/glossary/{chr(c_idx)}.htm').content
+	start_idx = document.find('<!-- #BeginEditable "content" -->') + 33
+	end_idx = document.find('<!-- #EndEditable -->')
+	entries += document.split('<br>')
+
+with open("dictionary.txt") as file:
+	for entry in entries:
+		file.write(entry)
