@@ -46,6 +46,16 @@
 					<p th:text="${testingForm.name} + ' + ' + ${testingForm.style} + ':'" />
 					<h4 th:text="${testingForm.poem}" />
 					<button class="main__btn"><a href="home">Submit another message</a></button>
+
+					<!-- Testing newline HTML Conversion -->
+					<!-- Courtesy of https://linuxtut.com/en/64102d81bfab12dcdf86/ -->
+					<th:block th:if="${testingForm.poem}">
+						<th:block th:each="str, stat : ${testingForm.poem.split('\n',-1)}">
+							<th:block th:text="${str}"/>
+							<br th:if="${!stat.last}" />
+						</th:block>
+					</th:block>
+
                 </div>
 			</div>
 			<!-- 
