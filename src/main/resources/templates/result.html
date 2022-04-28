@@ -47,14 +47,14 @@
 					<!-- I LITERALY CANNOT BELIEVE THIS WORKS. THYMELEAF IS WEEIIRRDDDD -->
 					<h1>Result</h1>
 					<p th:text="${testingForm.name} + ' + ' + ${testingForm.style} + ':'" />
-					<p 
+					<p>
 						<th:block th:if="${testingForm.poem}">
 							<th:block th:each="str, stat : ${testingForm.poem.split('\n',-1)}">
 								<th:block th:text="${str}"/>
 								<br th:if="${!stat.last}" />
 							</th:block>
 						</th:block>
-					/>
+					</p>
 					<button class="main__btn"><a href="home">Submit another message</a></button>
                 </div>
 			</div>
