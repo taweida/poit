@@ -48,10 +48,6 @@
                         <p>Poem: <input type="text" th:field="*{poem}" /></p>
                         <p><button type="submit" value="Submit" class="main__btn">Go!</button></p>
                     </form>
-					<h1>Result</h1>
-                    <p th:text="'Name: ' + ${testingForm.name}" />
-                    <p th:text="'Poem: ' + ${testingForm.poem}" />
-                    <a href="/home">Submit another message</a>
                 </div>
 			</div>
 			<!-- 
@@ -59,6 +55,15 @@
 				<img src="images/pic1.svg" alt="pic" id="main__img">
 			</div>
 			-->
+		</div>
+		<div class="main_container">
+			<div class="main_content">
+				<h1>Result</h1>
+				<p th:text="'Name: ' + ${testingForm.name}" />
+				<p th:text="'Poem: ' + ${testingForm.poem}" />
+				<a href="/home">Submit another message</a>
+			</div>
+
 		</div>
 	</div>
 
