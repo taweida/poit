@@ -264,6 +264,13 @@
     color: #fff
 }
 
+.main__content h4 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff
+}
+
 .main__btn {
     font-size: 1rem;
     background-image: linear-gradient(to top, #bb62f7 0%, #ffd700 100%);
