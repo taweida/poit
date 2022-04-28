@@ -25,30 +25,28 @@ public class HelloController {
 	@PostMapping("/home")
 	public String poemSubmit(@ModelAttribute TestingForm testingForm, Model model){
 
-		//Initialize a PoemFactory, and a poem for the built poem to live. 
-		PoemFactory factory = new PoemFactory();
-		Poem poem;
+		//Initialize a PoemFactory depending on style
 
 		switch (testingForm.getStyle()) {
 			case "Haiku":
-
+				PoemFactory haikuFactory = new HaikuFactory();
+				Poem haikuPoem = haikuFactory.buildPoem(testingForm.getPoem());
+				testingForm.setPoem(haikuPoem.getPoemText());
 			break;
 
 			case "Shakespeare":
-
+				PoemFactory shakespeareFactory = new ShakespeareFactory();
+				Poem shakespearePoem = shakespeareFactory.buildPoem(testingForm.getPoem()); 
+				testingForm.setPoem(shakespearePoem.getPoemText());
 			break;
 
 			case "Limerick":
-				
+				PoemFactory limerickFactory = new LimerickFactory();
+				Poem limerickPoem = limerickFactory.buildPoem(testingForm.getPoem());
+				testingForm.setPoem(limerickPoem.getPoemText());
 			break;
 		}
-
-		//Pass the recieved text (from our adaptor testingForm) to Kai's build poem function?
-		poem = factory.buildPoem(testingForm.getPoem());
-
-		//Reset the adaptors poem text to the new poem for output testing?
-		testingForm.setPoem(poem.getPoemText());
-
+		
 		//Seems that addAttribute is essentialy "pushing"? 
 		//And we can use the simple "testingForm" as a way for Poem to communicate through Thymeleaf
 		//because I know it works. Call testingForm an adaptor lol. 
