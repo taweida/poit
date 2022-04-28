@@ -42,20 +42,20 @@
 				<h2>POEM</h2>
 				<p>And select your desired poem style.</p>
                 <div class="main_container">
-					<h1>Result</h1>
-					<p th:text="${testingForm.name} + ' + ' + ${testingForm.style} + ':'" />
-					<h4 th:text="${testingForm.poem}" />
-					<button class="main__btn"><a href="home">Submit another message</a></button>
-
 					<!-- Testing newline HTML Conversion -->
 					<!-- Courtesy of https://linuxtut.com/en/64102d81bfab12dcdf86/ -->
-					<th:block th:if="${testingForm.poem}">
-						<th:block th:each="str, stat : ${testingForm.poem.split('\n',-1)}">
-							<th:block th:text="${str}"/>
-							<br th:if="${!stat.last}" />
+					<!-- I LITERALY CANNOT BELIEVE THIS WORKS. THYMELEAF IS WEEIIRRDDDD -->
+					<h1>Result</h1>
+					<p th:text="${testingForm.name} + ' + ' + ${testingForm.style} + ':'" />
+					<p 
+						<th:block th:if="${testingForm.poem}">
+							<th:block th:each="str, stat : ${testingForm.poem.split('\n',-1)}">
+								<th:block th:text="${str}"/>
+								<br th:if="${!stat.last}" />
+							</th:block>
 						</th:block>
-					</th:block>
-
+					/>
+					<button class="main__btn"><a href="home">Submit another message</a></button>
                 </div>
 			</div>
 			<!-- 
