@@ -42,6 +42,22 @@
 				<h2>POEM</h2>
 				<p>And select your desired poem style.</p>
 			</div>
+            <div class="services">
+                <div class="services_container">
+                    <h1>Form</h1>
+                    <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
+                        <p>Name: <input type="text" th:field="*{name}" /></p>
+                        <p>Poem: <input type="text" th:field="*{poem}" /></p>
+                        <p><button type="submit" value="Submit" class="main__btn">Go!</button></p>
+                    </form>
+                </div>
+                <div class="services_container">
+                    <h1>Result</h1>
+                    <p th:text="'Name: ' + ${testingForm.name}" />
+                    <p th:text="'Poem: ' + ${testingForm.poem}" />
+                    <a href="/home">Submit another message</a>
+                </div>
+            </div>
 			<!-- 
 			<div class="main_image--container">
 				<img src="images/pic1.svg" alt="pic" id="main__img">
@@ -49,25 +65,6 @@
 			-->
 		</div>
 	</div>
-    
-    <div class="services">
-        <div class="services_container">
-            <h1>Form</h1>
-            <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
-                <p>Name: <input type="text" th:field="*{name}" /></p>
-                <p>Poem: <input type="text" th:field="*{poem}" /></p>
-                <p><button type="submit" value="Submit" class="main__btn">Go!</button></p>
-            </form>
-        </div>
-        <div class="services_container">
-            <h1>Result</h1>
-            <p th:text="'Name: ' + ${testingForm.name}" />
-            <p th:text="'Poem: ' + ${testingForm.poem}" />
-            <a href="/home">Submit another message</a>
-        </div>
-    </div>
-
-
 
 	<!--Footer-->
 		</div>
