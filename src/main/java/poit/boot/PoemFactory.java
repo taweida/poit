@@ -7,7 +7,7 @@ public class PoemFactory{
 
     public PoemFactory(){}
 
-    // TODO: if Poems aren't too bulky, add their PoemTrees as members
+    //TODO: if Poems aren't too bulky, add their PoemTrees as members
     public Poem buildPoem(String text){
         Poem newPoem = new Poem(text);
         ArrayList<PoemSection> words = decomposeText(text);
