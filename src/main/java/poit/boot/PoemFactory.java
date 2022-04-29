@@ -94,7 +94,7 @@ class ShakespeareFactory extends PoemFactory{
 
     public ShakespeareFactory(){
 
-        replacementMap = hashMapFromFile("Shakespeare/replacements.txt");
+        replacementMap = hashMapFromFile("./Shakespeare/replacements.txt");
         punctuationList = new ArrayList<Character>(Arrays.asList('.', ',', ';', ':', '-'));
 
     }
