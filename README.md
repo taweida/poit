@@ -4,7 +4,7 @@
 - Trevor Aweida
 - Ryan Osler
 
-###The live website can be found at:
+### The live website can be found at:
 [PoIT](https://poit-ooad.herokuapp.com/)
 
 ### And our report can be found at:
