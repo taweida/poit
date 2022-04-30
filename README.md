@@ -9,7 +9,7 @@ PoIT is a web application that takes user inputted text and generates a poem wit
 ### The live web app can be found here:
 [PoIT](https://poit-ooad.herokuapp.com/)
 
-### Our Demonstration video can be found here:
+### Our demonstration video can be found here:
 [Final Demonstration Video](https://drive.google.com/file/d/1GtOHTRZd-LP16Yqql9KSnrl0fog-PetU/view?usp=sharing)
 
 ### And our report can be found here:
