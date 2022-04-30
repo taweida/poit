@@ -45,7 +45,8 @@
                     <h1>Form</h1>
                     <form action="#" th:action="@{/home}" th:object="${testingForm}" method="post">
                         <p>Name: <input type="text" th:field="*{name}" /></p>
-                        <p>Poem: <input type="text" th:field="*{poem}" height="100" width="100"/></p>
+                        <!-- <p>Poem: <input type="text" th:field="*{poem}"/></p> -->
+						<p>Poem: <textarea type="text" th:field="*{poem}"></textarea></p>
 							<p>Style: <select th:field="*{style}">
 								<option th:value="'Haiku'" th:text="Haiku"></option>
 								<option th:value="'Shakespeare'" th:text="Shakespeare"></option>
