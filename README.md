@@ -4,7 +4,9 @@
 - Trevor Aweida
 - Ryan Osler
 
-### The live website can be found here:
+PoIT is a web application that takes user inputted text and generates a poem with a choice of three different styles. 
+
+### The live web app can be found here:
 [PoIT](https://poit-ooad.herokuapp.com/)
 
 ### Our Demonstration video can be found here:
@@ -13,13 +15,11 @@
 ### And our report can be found here:
 [Final Project Report](https://drive.google.com/file/d/1ByDBL9dC2eSLQd7f2SR9NkAu1aVRxjH0/view?usp=sharing)
 
-#### FYI - All the code is on the Master branch, not Main, due to Heroku Hosting.
+#### FYI - All the code is on the Master branch, not Main, due to Heroku deployment.
 
-The application is using a default Maven builder, and should be functional in mose IDEs.\n
+The application is using a default Maven builder, and should be functional in mose IDEs.
 However the live website is built and deployed through Heroku for convenience. 
 
 OOAD Spring 2022
 
 Java 8
-
-PoIT is a web application that takes user inputted text and generates a poem with a choice of three different styles. 
