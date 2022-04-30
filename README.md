@@ -17,7 +17,7 @@ PoIT is a web application that takes user inputted text and generates a poem wit
 
 #### FYI - All the code is on the Master branch, not Main, due to Heroku deployment.
 
-The application is using a default Maven builder, and should be functional in mose IDEs.
+The application is using a default Maven builder, and should be functional in most IDEs.
 However the live website is built and deployed through Heroku for convenience. 
 
 OOAD Spring 2022
